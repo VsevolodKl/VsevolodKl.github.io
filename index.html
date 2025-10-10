@@ -379,7 +379,6 @@ a > img {
     </div>
     <div class="footer"><div class="images"><img id="cop" src="img/copyright(3).png" alt="1"><img id="mail" src="img/mail.png" alt="headment.musci@gmail.com"></div></div>
     <script>
-        // Добавляем класс visible при прокрутке
         const spothref = document.getElementById("spota").href;
         const youthref = document.getElementById("youta").href;
         const yandhref = document.getElementById("yandexa").href
@@ -399,7 +398,6 @@ a > img {
             alertUser.style.display = 'block';
             alertUser.style.opacity = 1;
 
-            // Скрыть сообщение через 2 секунды
             setTimeout(function() {
                 alertUser.style.opacity = 0;
             }, 3000);
@@ -417,7 +415,6 @@ a > img {
             alertUser.style.display = 'block';
             alertUser.style.opacity = 1;
 
-            // Скрыть сообщение через 2 секунды
             setTimeout(function() {
                 alertUser.style.opacity = 0;
             }, 3000);
@@ -435,7 +432,6 @@ a > img {
             alertUser.style.display = 'block';
             alertUser.style.opacity = 1;
 
-            // Скрыть сообщение через 2 секунды
             setTimeout(function() {
                 alertUser.style.opacity = 0;
             }, 3000);
@@ -453,7 +449,6 @@ a > img {
             alertUser.style.display = 'block';
             alertUser.style.opacity = 1;
 
-            // Скрыть сообщение через 2 секунды
             setTimeout(function() {
                 alertUser.style.opacity = 0;
             }, 3000);
@@ -467,10 +462,8 @@ a > img {
             });
 
         document.getElementById('mail').addEventListener('click', function() {
-            // Текст, который будет скопирован
             const textToCopy = "headment.music@gmail.com";
 
-            // Создаем временный элемент textarea для копирования текста
             const textarea = document.createElement('textarea');
             textarea.value = textToCopy;
             document.body.appendChild(textarea);
@@ -478,12 +471,10 @@ a > img {
             document.execCommand('copy');
             document.body.removeChild(textarea);
 
-            // Опционально: показать уведомление пользователю
             const copyMessage = document.getElementById('copyMessage');
             copyMessage.style.display = 'block';
             copyMessage.style.opacity = 1;
 
-            // Скрыть сообщение через 2 секунды
             setTimeout(function() {
                 copyMessage.style.opacity = 0;
             }, 1000);
@@ -501,7 +492,7 @@ a > img {
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.5 }); // Анимация начнется, когда элемент будет виден на 50%
+        }, { threshold: 0.5 }); 
 
         elements.forEach(element => {
             observer.observe(element);
@@ -515,4 +506,5 @@ a > img {
     </script>
 </body>
 </html>
+
 
